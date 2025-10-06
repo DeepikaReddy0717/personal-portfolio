@@ -1,0 +1,90 @@
+/* Base section */
+.education.section {
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, #f8fbff, #eef5ff);
+}
+
+/* Title */
+.section__title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section__title::after {
+  content: "";
+  width: 80px;
+  height: 5px;
+  background: rgba(0, 123, 255, 0.85);
+  display: block;
+  margin: 0.75rem auto 0;
+  border-radius: 5px;
+}
+
+/* Grid layout */
+.education__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+/* Card Styling */
+.education__card {
+  background: linear-gradient(145deg, #ffffff, #f2f7fd);
+  border: 2px solid rgba(0, 123, 255, 0.2);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  max-width: 380px;
+  width: 100%;
+  position: relative;
+}
+
+.education__card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 123, 255, 0.3);
+  background: #e6f2ff;
+}
+
+/* Image */
+.education__img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+/* Title & Description */
+.education__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2d3d;
+  margin-bottom: 0.6rem;
+}
+
+.education__description {
+  font-size: 0.95rem;
+  color: #3c4c60;
+  line-height: 1.5;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 1024px) {
+  .education__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .education__container {
+    grid-template-columns: 1fr;
+  }
+}
