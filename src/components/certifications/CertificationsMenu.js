@@ -96,44 +96,8 @@ const Menu = [
 			style: { width: '100%', height: 'auto' }
 		}
 	},
-	{
-		id: 10,
-		title: "Web Development Intern",
-		company: "Skill Craft Technology",
-		certificate: {
-			src: certificate,
-			style: { width: '100%', height: 'auto' }
-		}
-	},
-	{
-		id: 11,
-		title: "Django for Everybody",
-		company: "University of Michigan - Coursera",
-		certificate: {
-			src: django,
-			style: { width: '100%', height: 'auto' }
-		}
-	},
 	
-	{
-		id: 13,
-		title: "Problem solving (Basic)",
-		company: " HackerRank",
-		certificate: {
-			src: problemsolving,
-			style: { width: '100%', height: 'auto' }
-		}
-	},
 	
-	{
-		id: 14,
-		title: "Coding Preparation",
-		company: "Meta-Coursera",
-		certificate: {
-			src: coding,
-			style: { width: '100%', height: 'auto' }
-		}
-	},
 	
 	
 	
