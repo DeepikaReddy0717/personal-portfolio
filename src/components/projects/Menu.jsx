@@ -2,6 +2,7 @@ import ofd from "../../assets/ofd.png";
 import ems from "../../assets/ems.png";
 import dev from "../../assets/deveops.png";
 import ai from "../../assets/ai.png";
+import port from "../../assets/portfolio.png";
 
 const Menu = [
 	{
@@ -23,6 +24,15 @@ const Menu = [
 	},
 	{
 		id: 3,
+		image: port,
+		title: "Personal Portfolio Website",
+		category: ["ReactJS"],
+		repositoryUrl: "https://github.com/DeepikaReddy0717/personal-portfolio.git",
+		description: "A personal portfolio website built with ReactJS to display my projects, skills, and experience in a simple and responsive layout."
+
+	},
+	{
+		id: 4,
 		image: ai,
 		title: "Conversational AI in HealthCare",
 		category: ["Python,NLP,ML"],
@@ -31,7 +41,7 @@ const Menu = [
 
 	},
 	{
-		id: 4,
+		id: 5,
 		image: dev,
 		title: "Food Delivery App with CI/CD",
 		category: ["CI/CD & DevOps"],
