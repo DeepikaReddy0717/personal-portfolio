@@ -1,258 +1,149 @@
 :root {
-  --first-color: #007acc;          /* Deep Blue - serious and fresh */
-  --first-color-light: #3399ff;    /* Bright Blue - hover highlight */
-  --shadow: 0 4px 15px rgba(0, 122, 204, 0.35); /* subtle blue glow */
-  --border-radius: 14px;
-  --font-bold: 700;
-
-  /* Text & background */
-  --text-color-primary: #0D1B2A;   /* Midnight Navy */
-  --text-color-light: #778DA9;     /* Slate Gray */
-  --background-color: #F0F8FF;     /* Alice Blue */
-
-  /* Accent colors for buttons and highlights */
-  --accent-color: #FF6F61;         /* Coral Red */
-  --accent-color-light: #FFA07A;   /* Light Salmon */
+  /* Pastel Theme Palette */
+  --first-color: #9b9be3;        /* Soft Lavender */
+  --first-color-light: #d8d7ff;  /* Pale Lilac */
+  --accent-color: #a1e3c7;       /* Mint Green */
+  --accent-color-light: #e9fff5; /* Soft Mint Background */
+  --background-color: #fafaff;   /* Off White with Lavender hint */
+  --text-color-primary: #1e1e2f; /* Deep Indigo */
+  --text-color-light: #64648a;   /* Muted Lavender Gray */
+  --shadow: 0 8px 20px rgba(155, 155, 227, 0.25);
+  --border-radius: 16px;
 }
 
-/* Filter buttons container */
-.projects__filters {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  column-gap: 1.875rem;
-  margin-bottom: 2rem;
-}
-
-/* Filter buttons */
-.projects__item {
-  cursor: pointer;
-  font-weight: var(--font-bold);
-  color: var(--text-color-primary);
-  background-color: transparent;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: var(--border-radius);
-  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-  outline: none;
-  user-select: none;
-  border: 2px solid transparent;
-}
-
-/* Active filter button style */
-.projects__item-active {
-  color: #fff;
-  background-color: var(--first-color);
-  box-shadow: 0 0 15px 3px rgba(0, 122, 204, 0.75);
-  font-weight: 900;
-  border: 2px solid #005a9e;
-  text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
-}
-
-/* Hover and focus styles for buttons */
-.projects__item:hover,
-.projects__item:focus,
-.projects__item:active {
-  color: #fff;
-  background-color: var(--first-color-light);
-  box-shadow: 0 0 15px rgba(51, 153, 255, 0.8);
-  font-weight: 800;
-  border: 2px solid #1a75ff;
-  outline: none;
-}
-
-/* Projects grid container */
+/* Container */
 .projects__container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.875rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
   justify-content: center;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, var(--background-color), var(--accent-color-light));
 }
 
-/* Individual project card */
+/* Project Card */
 .projects__card {
   position: relative;
-  overflow: hidden;
+  background: #fff;
   border-radius: var(--border-radius);
+  overflow: hidden;
   box-shadow: var(--shadow);
-  background-color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.35s ease;
+  transform: translateY(0);
 }
 
 .projects__card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 16px rgba(74, 144, 226, 0.3);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(155, 155, 227, 0.35);
 }
 
-/* Hover mask */
+/* Thumbnail */
+.projects__thumbnail {
+  position: relative;
+  height: 260px;
+  background: linear-gradient(135deg, var(--first-color-light), var(--accent-color-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.projects__img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.projects__card:hover .projects__img {
+  transform: scale(1.08);
+}
+
+/* Overlay Mask */
 .projects__mask {
-  background-color: var(--first-color);
   position: absolute;
-  left: 0;
   top: 0;
-  height: 100%;
+  left: 0;
   width: 100%;
-  transition: opacity 0.3s ease;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(155, 155, 227, 0.3), rgba(161, 227, 199, 0.3));
   opacity: 0;
-  z-index: 1;
+  transition: opacity 0.4s ease;
 }
 
 .projects__card:hover .projects__mask {
-  opacity: 0.85;
-}
-
-/* Project category tag */
-.projects__category {
-  color: #fff;
-  background-color: #005a9e;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  position: absolute;
-  top: 0;
-  left: 1.5rem;
-  font-size: 0.9rem;
-  padding: 0.25rem 0.8rem;
-  font-weight: 700;
-  box-shadow: 0 0 8px rgba(0, 90, 158, 0.7);
-  transform: translateY(-40px);
-  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  z-index: 10;
-}
-
-/* Show category on hover */
-.projects__card:hover .projects__category {
   opacity: 1;
-  transform: translateY(0);
-  background-color: #004080;
-  box-shadow: 0 0 15px rgba(0, 64, 128, 0.9);
 }
 
-/* Project title and description */
-.projects__title {
-  color: #fff;
-  font-size: var(--h3-font-size);
-  margin: 0 0 0.98rem;
-  padding: 0 1.25rem;
+/* Category Tag */
+.projects__category {
   position: absolute;
-  top: 3.75rem;
-  transform: translateY(30px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  opacity: 0;
-  z-index: 10;
+  top: 1rem;
+  left: 1rem;
+  background: var(--first-color);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 10px rgba(155, 155, 227, 0.5);
 }
 
-/* Show title on hover */
+/* Title */
+.projects__title {
+  position: absolute;
+  bottom: 4rem;
+  left: 1rem;
+  right: 1rem;
+  color: var(--text-color-primary);
+  font-size: 1.15rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
 .projects__card:hover .projects__title {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Buttons (GitHub, Info, etc.) */
-.projects__github-button,
-.projects__button,
-.projects__info-button {
-  color: #fff;
-  position: absolute;
-  bottom: 1.5rem;
-  font-size: var(--h3-font-size);
-  display: block;
-  background-color: #ffd15c;
-  height: 40px;
-  width: 40px;
-  cursor: pointer;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 42px;
-  transition: opacity 0.3s ease, background-color 0.3s ease;
-  opacity: 0;
-  z-index: 10;
-  pointer-events: auto;
-}
-
-/* Position buttons separately */
+/* GitHub Button */
 .projects__github-button {
-  left: 4.5rem;
-}
-.projects__button {
-  left: 1.5rem;
-}
-.projects__info-button {
-  left: 7.5rem;
+  position: absolute;
+  bottom: 1.2rem;
+  left: 1.2rem;
+  width: 42px;
+  height: 42px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  color: #1e1e2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  opacity: 0;
 }
 
-/* Show buttons on hover */
-.projects__card:hover .projects__button,
-.projects__card:hover .projects__github-button,
-.projects__card:hover .projects__info-button {
+.projects__card:hover .projects__github-button {
   opacity: 1;
 }
 
-/* Thumbnail container */
-.projects__thumbnail {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--border-radius);
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 267px;
+.projects__github-button:hover {
+  background: var(--first-color);
+  color: #fff;
+  transform: scale(1.15);
 }
 
-/* Project image */
-.projects__img {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-  object-fit: contain;
-}
-
-/* Description styling */
-.projects__description {
-  margin: 0;
-  font-size: var(--normal-font-size);
-  line-height: 1.6;
-  color: #222;
-  padding: 0 1.25rem 1rem;
-}
-
-/* Responsive design */
-@media screen and (max-width: 1024px) {
-  .projects__filters {
-    justify-content: center;
-  }
-
-  .projects__container {
-    grid-template-columns: repeat(2, 330px);
-    justify-content: center;
-    row-gap: 1.875rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .projects__container {
-    grid-template-columns: 310px;
-    justify-content: center;
-    row-gap: 1.875rem;
-  }
-
-  .projects__filters {
-    row-gap: 0.25rem;
-  }
-}
-
-@media screen and (max-width: 350px) {
+/* Responsive */
+@media (max-width: 768px) {
   .projects__container {
     grid-template-columns: 1fr;
+    padding: 2rem 1rem;
   }
-}
-
-/* Remove default focus outline but add a subtle focus style */
-.projects__item:focus,
-.projects__item:active {
-  outline: none;
-  background-color: var(--first-color-light);
-  color: #fff;
-  box-shadow: 0 0 8px var(--first-color-light);
-  border-radius: var(--border-radius);
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css';
 import Image from '../../assets/about-profile.jpg';
-import Resume from '../../assets/DEEPU.pdf'; 
+import Resume from '../../assets/resume_ai.pdf'; 
 
 const About = () => {
     const downloadResume = () => {

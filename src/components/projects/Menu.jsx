@@ -1,6 +1,8 @@
 import ofd from "../../assets/ofd.png";
 import ems from "../../assets/ems.png";
 import dev from "../../assets/deveops.png";
+import ai from "../../assets/ai.png";
+
 const Menu = [
 	{
 	id: 1,
@@ -21,13 +23,23 @@ const Menu = [
 	},
 	{
 		id: 3,
+		image: ai,
+		title: "Conversational AI in HealthCare",
+		category: ["Python,NLP,ML"],
+		repositoryUrl: "https://github.com/DeepikaReddy0717/Conversational-AI-for-healthCare.git",
+		description: "Trained a healthcare chatbot on medical datasets for accurate symptom mapping and context-aware responses."
+
+	},
+	{
+		id: 4,
 		image: dev,
 		title: "Food Delivery App with CI/CD",
 		category: ["CI/CD & DevOps"],
 		repositoryUrl: "https://github.com/DeepikaReddy0717/SDP_Project",
 		description: "Automated CI/CD pipeline using Jenkins and Docker for smooth builds, tests, and deployments."
 
-	}
+	},
+	
 	
 ];
 
