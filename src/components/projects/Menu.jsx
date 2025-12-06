@@ -48,7 +48,7 @@ const Menu = [
 		repositoryUrl: "https://github.com/DeepikaReddy0717/SDP_Project",
 		description: "Automated CI/CD pipeline using Jenkins and Docker for smooth builds, tests, and deployments."
 
-	},
+	}
 	
 	
 ];
