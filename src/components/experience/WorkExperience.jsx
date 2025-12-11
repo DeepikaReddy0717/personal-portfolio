@@ -1,7 +1,7 @@
 import sdp from '../../assets/sdp.png';
 import skillcraft from '../../assets/s.png';
 import averixis from '../../assets/averixix.jpg'; // Add logo if available
-
+import aver from '../../assets/aver.png';
 const WorkExperience = [
   {
     id: 1,
@@ -26,7 +26,7 @@ const WorkExperience = [
     yearsActive: "September 2025 – Present",
     location: "Remote",
     image: { src: averixis, style: { width: '75px', height: 'auto' } },
-    certificate: null, // Add later if available
+    certificate: { src: aver, style: { width: '75%', height: 'auto' } },
    information: [
   "Learning and applying Python, NLP, and Machine Learning techniques in real-time scenarios.",
   "Working on data preprocessing, text classification, and model training using Scikit-learn.",
