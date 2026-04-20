@@ -7,14 +7,9 @@ import { RiGithubLine} from "react-icons/ri";
 import { motion } from "framer-motion";
 
 const Projects = () => {
-	const [items, setItems] = useState(Menu);
-	const [showDescription, setShowDescription] = useState(null);
+	const [items] = useState(Menu);
 
-	const toggleDescription = (id, e) => {
-		e.preventDefault();
-		e.stopPropagation();
-		setShowDescription(showDescription === id ? null : id);
-	};
+	
 
 	return (
 		<section className="projects container section" id="projects">
