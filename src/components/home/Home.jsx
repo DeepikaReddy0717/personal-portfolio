@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import Me from '../../assets/home.jpg';
+import Me from '../../assets/home.jpeg';
 import HeaderSocials from './HeaderSocials';
 
 const Home = () => {

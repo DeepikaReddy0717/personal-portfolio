@@ -4,19 +4,31 @@ import './SkillsAndTechnology.css';
 const skillsData = [
     {
         category: "🖥️ Programming Languages",
-        items: ["C/C++", "Java", "Python", "SQL"],
+        items: ["Python", "C", "C++", "Java", "SQL"],
     },
     {
-        category: "🌐 Web Technologies",
-        items: ["HTML", "CSS", "JavaScript"],
+        category: "🌐 Web Development",
+        items: ["HTML", "CSS", "JavaScript", "React", "Spring Boot"],
     },
     {
-        category: "⚙️ Frameworks & Platforms",
+        category: "🤖 AI / Machine Learning",
         items: [
-            "Spring Boot + React Full Stack Development",
-            "Tomcat Server",
-            "Linux Administration",
-            "Generative AI Prompting"
+            "Scikit-learn",
+            "TensorFlow",
+            "Keras",
+            "NLP",
+            "Isolation Forest",
+            "BERT"
+        ],
+    },
+    {
+        category: "📊 Data Analysis & Visualization",
+        items: [
+            "NumPy",
+            "Pandas",
+            "Feature Engineering",
+            "Matplotlib",
+            "Seaborn"
         ],
     },
     {
@@ -24,32 +36,27 @@ const skillsData = [
         items: ["MySQL", "PostgreSQL", "MongoDB"],
     },
     {
-        category: "📊 Data Structures & Algorithms (DSA)",
-        items: ["Intermediate DSA"],
-    },
-    
-    {
-        category: "📂 Version Control ",
-        items: ["Git", "GitHub"],
-    },
-    
-    
-    {
-        category: "🛠️ Developer Tools",
+        category: "⚙️ Tools & Platforms",
         items: [
-            "VS Code",
-            "Eclipse",
-            "MySQL Workbench",
+            "Git",
+            "GitHub",
+            "Docker",
             "Postman",
-            
+            "VS Code"
         ],
     },
     {
-        category: "☁️ Deployment & Hosting",
-items: ["Vercel", "PythonAnywhere","Jenkins(CI/CD)",
-            "Docker"],
-     
-
+        category: "☁️ Deployment & DevOps",
+        items: ["Vercel", "PythonAnywhere", "Jenkins (CI/CD)"],
+    },
+    {
+        category: "🏆 Competitive Programming",
+        items: [
+            "LeetCode (150+ problems)",
+            "CodeChef (2⭐)",
+            "Codeforces",
+            "HackerRank"
+        ],
     },
 ];
 

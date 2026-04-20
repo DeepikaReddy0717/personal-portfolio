@@ -1,16 +1,14 @@
 import Salesforce from "../../assets/salesforce.png";
 import MongoDB from "../../assets/MongoDB.png";
 import nptel from "../../assets/nptel.png";
-import certificate from "../../assets/sdp.png";
-import django from "../../assets/django.png";
-import problemsolving from "../../assets/problemsloving.png";
 import oracle from "../../assets/oracle.jpg";
 import Lingua from "../../assets/linguaskill.png";
-import coding from 	"../../assets/coding.png";
 import azuru from "../../assets/azuru.png";
 import srucm from "../../assets/srucm.png";
 import c1 from "../../assets/c11.jpg";
 import c2 from "../../assets/c12.jpg";
+import g from "../../assets/guidewire.png";
+import al from "../../assets/graph.png";
 const Menu = [
 	{
 		id: 1,
@@ -96,6 +94,24 @@ const Menu = [
 			style: { width: '100%', height: 'auto' }
 		}
 	},
+	{
+    id: 10,
+    title: "Guidewire DEVTrails University Hackathon 2026",
+    company: "Guidewire Software",
+    certificate: {
+        src: g,
+        style: { width: '100%', height: 'auto' }
+    }
+},
+{
+    id: 11,
+    title: "Graph Theory Programming Camp",
+    company: "AlgoUniversity",
+    certificate: {
+        src: al,
+        style: { width: '100%', height: 'auto' }
+    }
+},
 	
 	
 	
