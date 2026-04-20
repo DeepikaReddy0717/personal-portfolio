@@ -3,7 +3,7 @@ import ems from "../../assets/ems.png";
 import dev from "../../assets/deveops.png";
 import ai from "../../assets/ai.png";
 import port from "../../assets/portfolio.png";
-import db from "../../assets/dbbb.jpg";
+import db from "../../assets/temp.jpg"; 
 const Menu = [
 	{
 		id: 0,
