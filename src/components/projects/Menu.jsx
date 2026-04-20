@@ -3,8 +3,16 @@ import ems from "../../assets/ems.png";
 import dev from "../../assets/deveops.png";
 import ai from "../../assets/ai.png";
 import port from "../../assets/portfolio.png";
-
+import db from "../../assets/dbbb.jpg";
 const Menu = [
+	{
+		id: 0,
+		image: db,
+		title: "DB Guardian AI – Database Downtime Prediction",
+		category: ["Machine Learning", "Python"],
+		repositoryUrl: "https://github.com/DeepikaReddy0717/DB_GUARDIAN-AI-",
+		description: "AI system to predict database downtime using Isolation Forest and anomaly detection.",
+	},
 	{
 	id: 1,
 	image: ems,
