@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Projects.css";
 
 import Menu from "./Menu";
-import { RiGithubLine, RiLink, RiInformationLine } from "react-icons/ri";
+import { RiGithubLine} from "react-icons/ri";
 
 import { motion } from "framer-motion";
 

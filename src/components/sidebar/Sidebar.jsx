@@ -14,7 +14,6 @@ import {
     RiCodeLine,
     RiAwardLine,
     RiToolsLine,
-    RiSettings3Line
 } from "react-icons/ri";
 
 
